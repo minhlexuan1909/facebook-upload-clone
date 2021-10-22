@@ -1,0 +1,79 @@
+.left-nav {
+  /* padding-top: 16px; */
+  /* position: fixed; */
+  z-index: 100;
+  left: 0;
+  background-color: RGB(24, 25, 26);
+  /* width: 305px; */
+  padding: 0px 8px;
+  overflow: auto;
+  height: 100%;
+}
+.left-nav--small-screen {
+  position: absolute;
+  width: 100vw;
+}
+.left-nav__upper {
+  margin-top: 16px;
+}
+.left-nav__nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-nav__item {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+.left-nav__item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.item__wrapper {
+  display: flex;
+  /* padding: 0px 8px; */
+  border-radius: 10px;
+}
+
+.left-nav__icon {
+  margin-top: 4px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+}
+.left-nav__name {
+  /* margin-left: 10px; */
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+.see-more-icon {
+  /* min-width: 28px;
+  min-height: 28px; */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: RGB(48, 48, 49);
+}
+
+/* __________________________lower_______________________  */
+.left-nav__shortcut-title {
+  padding-top: 20px;
+  padding-bottom: 4px;
+  color: RGB(215, 230, 235);
+}
+.shortcut__icon {
+  border-radius: 5px;
+  /* overflow: auto; */
+}
+
+@media screen and (max-width: 1099px) {
+  .left-nav--disappear {
+    display: none;
+  }
+}

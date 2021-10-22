@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+  font-size: 15px;
+  font-family: inherit;
+  width: 100%;
+}
+input::placeholder {
+  color: RGB(176, 179, 184);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* svg {
+  fill: RGB(228, 230, 235);
+} */
+header {
+  /* position: sticky; */
+  top: 0;
+  left: 0;
+}
+main {
+  height: calc(100vh - 56px);
+  display: flex;
+  background-color: RGB(24, 25, 26);
+  /* height: calc(100vh - 56px);
+  overflow: auto; */
+}
+.status-anh-friends {
+  display: flex;
+  flex-direction: row;
+  /* flex-basis: 744px; */
+  max-height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+.status {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0px 32px;
+}

@@ -1,0 +1,243 @@
+.header-container {
+  /* position: fixed; */
+  width: 100%;
+}
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  height: 56px;
+  background-color: RGB(36, 37, 38);
+  border-bottom: 1px solid RGB(57, 58, 59);
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  padding: 7px;
+}
+.header__logo {
+  height: 100%;
+}
+.header__back-from-search {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.header__back-from-search:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header__search {
+  position: relative;
+  width: 292px;
+  height: 100%;
+}
+.input {
+  display: flex;
+  align-items: center;
+  background-color: RGB(58, 59, 60);
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  /* width: 100%; */
+}
+
+.header__search input {
+  margin-left: 5px;
+  width: 100%;
+}
+.icon--appear {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all linear 0.2s;
+}
+.icon--insert {
+  position: relative;
+}
+.icon--disappear {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all linear 0.2s;
+}
+.icon--remove {
+  position: absolute;
+}
+/* ________________________________header__middle_______________________ */
+.header__middle {
+  position: absolute;
+  width: 100%;
+  flex: 1 1 0%;
+  height: 100%;
+}
+.header__nav {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 0px 110px;
+}
+.header__nav-item {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  min-width: 50px;
+  max-width: 111.6px;
+  cursor: pointer;
+}
+.nav-item--active {
+  border-radius: 0px;
+  border-bottom: 3px solid RGB(45, 136, 255);
+}
+.nav-item--active svg {
+  fill: RGB(45, 136, 255);
+}
+.nav-item--inactive {
+  border-bottom: none;
+  padding: 3px 0px;
+}
+.nav-item--inactive svg {
+  fill: RGB(176, 179, 184);
+}
+.nav-item--inactive:hover {
+  border-radius: 5px;
+}
+.nav-item--inactive > *:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.nav-item__wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* border: 2px solid brown; */
+
+  min-width: 50px;
+  height: 100%;
+  border-radius: 7px;
+  /* padding: 0px 30px; */
+  flex-grow: 1;
+}
+
+.more--appear {
+  display: none;
+}
+
+/* ________________________________header__right_______________________ */
+.header__right {
+  z-index: 1;
+  padding: 7px;
+  display: flex;
+}
+.header__user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px;
+  border-radius: 50px;
+}
+.header__user:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* .user__image {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.user__name {
+  color: white;
+  margin-left: 5px;
+} */
+.nav-item--icon {
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 36px;
+  max-width: 36px;
+  transform: scale(0.77777777);
+  /* border-radius: 50%; */
+}
+.nav-item--name {
+  color: white;
+  margin-left: 5px;
+}
+
+.header__functions {
+  display: flex;
+}
+
+.function--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: RGB(58, 59, 60);
+  margin-left: 10px;
+}
+
+.function--item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: red; */
+}
+
+.function--item svg {
+  fill: RGB(228, 230, 235);
+}
+
+.create--appear {
+  display: none;
+}
+
+@media only screen and (max-width: 1259px) {
+  .search--small-screen {
+    width: 42px;
+    justify-content: center;
+  }
+  .search--small-screen input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 0px;
+    margin: 0px;
+  }
+  .header__user {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1099px) {
+  .header__nav-item {
+    max-width: calc(15vw - 55px);
+  }
+  .menu--disappear {
+    display: none;
+  }
+  .more--appear {
+    display: block;
+  }
+  .game--appear {
+    display: none;
+  }
+  .create--appear {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home--disappear,
+  .pages--disappear,
+  .watch--disappear,
+  .groups--disappear {
+    display: none;
+  }
+  .header__nav {
+    justify-content: flex-start;
+  }
+}
