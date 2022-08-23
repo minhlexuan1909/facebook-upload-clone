@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ControlIcon from "../Icon/ControlIcon";
+import MenuIcon from "../Icon/MenuIcon";
 import "./Header.css";
 
 export default function Header({ setIsShowingMore }) {
@@ -14,7 +16,6 @@ export default function Header({ setIsShowingMore }) {
   const handleNavClick = (activeNavNum) => {
     setActiveNav(activeNavNum);
   };
-  const handleSearchClick = (e) => {};
   const handleSearchFocus = (e) => {
     setIsSearching(true);
     console.log(e.target);
@@ -24,9 +25,6 @@ export default function Header({ setIsShowingMore }) {
   const handleSearchBlur = (e) => {
     setIsSearching(false);
     e.target.parentNode.classList.add("search--small-screen");
-  };
-  const handleIconTransitionEnd = (e) => {
-    e.target.classList.add(`${isSearching ? "icon--remove" : "icon--insert"}`);
   };
 
   useEffect(() => {
@@ -42,21 +40,7 @@ export default function Header({ setIsShowingMore }) {
         <div className="header__left">
           {isSearching ? (
             <div className="header__back-from-search">
-              <i
-                data-visualcompletion="css-img"
-                class="hu5pjgll m6k467ps"
-                style={{
-                  backgroundImage:
-                    "url('https://static.xx.fbcdn.net/rsrc.php/v3/yX/r/b1A2DlBdqL5.png')",
-                  backgroundPosition: "-158px -13px",
-                  backgroundSize: "auto",
-                  width: "20px",
-                  height: "20px",
-                  backgroundRepeat: "no-repeat",
-                  display: "inline-block",
-                  filter: "invert(89%)",
-                }}
-              ></i>
+              <ControlIcon posX={-71} posY={-86} />
             </div>
           ) : (
             <a href="">
@@ -91,24 +75,40 @@ export default function Header({ setIsShowingMore }) {
             className="header__search input search--small-screen"
             // onFocus={handleSearchClick}
           >
-            <i
-              data-visualcompletion="css-img"
+            <svg
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
               className={`search__icon ${
                 isSearching ? "icon--disappear" : "icon--appear"
               }`}
-              onTransitionEnd={handleIconTransitionEnd}
               style={{
-                backgroundImage:
-                  "url('https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/el3CzCBvi2r.png')",
-                backgroundPosition: "-153px -109px",
-                backgroundSize: "auto",
-                width: "16px",
-                height: "16px",
-                backgroundRepeat: "no-repeat",
-                // display: `${isSearching ? "none" : "inline-block"}`,
                 filter: "invert(89%)",
               }}
-            ></i>
+            >
+              <g fill-rule="evenodd" transform="translate(-448 -544)">
+                <g fill-rule="nonzero">
+                  <path
+                    d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z"
+                    transform="translate(448 544)"
+                  ></path>
+                  <path
+                    d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z"
+                    transform="translate(448 544)"
+                  ></path>
+                  <path
+                    d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z"
+                    transform="translate(448 544)"
+                  ></path>
+                  <path
+                    d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z"
+                    transform="translate(448 544)"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+
             <input
               type="text"
               placeholder="Search Facebook"
@@ -232,7 +232,7 @@ export default function Header({ setIsShowingMore }) {
         <div className="header__right">
           <div className="header__user">
             <img
-              src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.6435-1/cp0/c0.21.60.60a/p60x60/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=XEmhW9eD8aEAX_F7r88&_nc_ht=scontent.fhan3-5.fna&oh=b3e64eb36e0057fd0db89a5d4a236c84&oe=617A0A5A"
+              src={require("../../assets/avatar.jpg").default}
               alt=""
               className="user__image nav-item--icon"
             />
@@ -240,35 +240,7 @@ export default function Header({ setIsShowingMore }) {
           </div>
           <div className="header__functions">
             <div className="functions__menu function--item">
-              <i
-                data-visualcompletion="css-img"
-                className="menu--disappear"
-                style={{
-                  backgroundImage:
-                    "url('https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/el3CzCBvi2r.png')",
-                  backgroundPosition: "-168px -67px",
-                  backgroundSize: "auto",
-                  width: "20px",
-                  height: "20px",
-                  backgroundRepeat: "no-repeat",
-                  // display: "inline-block",
-                  filter: "invert(89%)",
-                }}
-              ></i>
-              <i
-                data-visualcompletion="css-img"
-                className="create--appear"
-                style={{
-                  backgroundImage:
-                    "url('https://static.xx.fbcdn.net/rsrc.php/v3/yX/r/b1A2DlBdqL5.png')",
-                  backgroundPosition: "0 -88px",
-                  backgroundSize: "auto",
-                  width: "20px",
-                  height: "20px",
-                  backgroundRepeat: "no-repeat",
-                  filter: "invert(89%)",
-                }}
-              ></i>
+              <MenuIcon posX={0} posY={-194} />
             </div>
             <div className="functions__messages function--item">
               <svg
@@ -293,21 +265,7 @@ export default function Header({ setIsShowingMore }) {
               </svg>
             </div>
             <div className="functions__account function--item">
-              <i
-                data-visualcompletion="css-img"
-                class="hu5pjgll lzf7d6o1"
-                style={{
-                  backgroundImage:
-                    "url(https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/el3CzCBvi2r.png)",
-                  backgroundPosition: "-147px -88px",
-                  backgroundSize: "auto",
-                  width: "20px",
-                  height: "20px",
-                  backgroundRepeat: "no-repeat",
-                  display: "inline-block",
-                  filter: "invert(89%) sepia(6%) hue-rotate(185deg)",
-                }}
-              ></i>
+              <ControlIcon posX={0} posY={-112} />
             </div>
           </div>
         </div>

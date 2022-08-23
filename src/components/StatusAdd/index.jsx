@@ -2,6 +2,14 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import "./StatusAdd.css";
 import { StatusContext } from "../Status";
 import { v4 as uuidv4 } from "uuid";
+import LiveVideoIcon from "../Icon/LiveVideoIcon";
+import PhotoOrVideoIcon from "../Icon/PhotoOrVideoIcon";
+import FeelingOrActivity from "../Icon/FeelingOrActivity";
+import ControlIcon from "../Icon/ControlIcon";
+import AddToPostIcon from "../Icon/AddToPostIcon";
+import FlagAddToPostIcon from "../Icon/FlagAddToPostIcon";
+import PositionIcon from "../Icon/PositionIcon";
+import AddPhotoBtnIcon from "../Icon/AddPhotoBtnIcon";
 
 export default function StatusAdd() {
   const {
@@ -146,30 +154,17 @@ export default function StatusAdd() {
                 className="create-feild__closeBtn"
                 onClick={closeBtnOnClickHandler}
               >
-                <i
-                  data-visualcompletion="css-img"
-                  style={{
-                    backgroundImage:
-                      "url(https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/qsE06umyfuJ.png)",
-                    backgroundPosition: "-84px -107px",
-                    backgroundSize: "auto",
-                    width: "20px",
-                    height: "20px",
-                    backgroundRepeat: "no-repeat",
-                    display: "inline-block",
-                    filter: "invert(62%)",
-                  }}
-                ></i>
+                <ControlIcon posX={0} posY={-132} />
               </div>
             </div>
             <div className="create-feild__user">
               <img
                 className="user__image"
-                src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.6435-1/cp0/c0.14.40.40a/p40x40/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=XEmhW9eD8aEAX_F7r88&_nc_ht=scontent.fhan3-5.fna&oh=54b4c2bb05065686b205de1b2c13912f&oe=617C17F8"
+                src={require("../../assets/avatar.jpg").default}
                 alt=""
               />
               <div className="user__right">
-                <div className="user__name">Minh Xuân Lê</div>
+                <div className="user__name">Minh Lê</div>
                 <div className="status__mode">
                   <div className="status-mode__wrapper">
                     <img
@@ -217,20 +212,7 @@ export default function StatusAdd() {
                         className="upload-image__closeBtn"
                         onClick={uploadCloseBtnOnClickHandler}
                       >
-                        <i
-                          data-visualcompletion="css-img"
-                          style={{
-                            backgroundImage:
-                              "url(https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/qsE06umyfuJ.png)",
-                            backgroundPosition: "-84px -107px",
-                            backgroundSize: "auto",
-                            width: "20px",
-                            height: "20px",
-                            backgroundRepeat: "no-repeat",
-                            display: "inline-block",
-                            filter: "invert(62%)",
-                          }}
-                        ></i>
+                        <ControlIcon posX={0} posY={-132} />
                       </div>
                       {newStatus.hasOwnProperty("imageContent") ? (
                         <img
@@ -251,20 +233,7 @@ export default function StatusAdd() {
                           >
                             <div className="upload-image__pc-icon-wrapper">
                               {/* <div className="upload-image__pc-icon"> */}
-                              <i
-                                data-visualcompletion="css-img"
-                                style={{
-                                  backgroundImage:
-                                    "url(https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/SMU_Jc8Ccy3.png)",
-                                  backgroundPosition: "-21px -379px",
-                                  backgroundSize: "auto",
-                                  width: "20px",
-                                  height: "20px",
-                                  backgroundRepeat: "no-repeat",
-                                  display: "inline-block",
-                                  filter: "invert(89%)",
-                                }}
-                              ></i>
+                              <AddPhotoBtnIcon posX={0} posY={-58} />
                               {/* </div> */}
                             </div>
                             <div className="upload-image__pc-big-text">
@@ -302,94 +271,22 @@ export default function StatusAdd() {
                     className="add-item-list__item"
                     onClick={addImageIconOnClickHandler}
                   >
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/cFhDhqxQYGs.png)",
-                        backgroundPosition: "0px -225px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <AddToPostIcon posX={0} posY={-283} />
                   </div>
                   <div className="add-item-list__item">
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/cFhDhqxQYGs.png)",
-                        backgroundPosition: "0px -100px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <AddToPostIcon posX={0} posY={-183} />
                   </div>
                   <div className="add-item-list__item">
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/cFhDhqxQYGs.png)",
-                        backgroundPosition: "0px -25px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <AddToPostIcon posX={0} posY={-158} />
                   </div>
                   <div className="add-item-list__item">
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png)",
-                        backgroundPosition: "0px -225px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <PositionIcon posX={0} posY={-225} />
                   </div>
                   <div className="add-item-list__item">
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/cFhDhqxQYGs.png)",
-                        backgroundPosition: "0px -175px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <FlagAddToPostIcon posX={0} posY={0} />
                   </div>
                   <div className="add-item-list__item">
-                    <i
-                      data-visualcompletion="css-img"
-                      style={{
-                        height: "24px",
-                        width: "24px",
-                        backgroundImage:
-                          "url(https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/FXuaWmKuZLn.png)",
-                        backgroundPosition: "0px -132px",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat",
-                        display: "inline-block",
-                      }}
-                    ></i>
+                    <AddToPostIcon posX={0} posY={-133} />
                   </div>
                 </div>
               </div>
@@ -411,7 +308,7 @@ export default function StatusAdd() {
           <a href="">
             <img
               className="user__image"
-              src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.6435-1/cp0/c0.21.60.60a/p60x60/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=XEmhW9eD8aEAX_F7r88&_nc_ht=scontent.fhan3-5.fna&oh=b3e64eb36e0057fd0db89a5d4a236c84&oe=617A0A5A"
+              src={require("../../assets/avatar.jpg").default}
               alt=""
             />
           </a>
@@ -431,54 +328,18 @@ export default function StatusAdd() {
         </div>
         <div className="status-add__lower">
           <div className="status-add__live status-add__item">
-            <i
-              data-visualcompletion="css-img"
-              style={{
-                backgroundImage:
-                  "url('https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/pqfSsGC8Mfo.png')",
-                backgroundPosition: "0 0",
-                backgroundSize: "26px 652px",
-                width: "24px",
-                height: "24px",
-                backgroundRepeat: "no-repeat",
-                display: "inline-block",
-              }}
-            ></i>
+            <LiveVideoIcon />
             <div>Live Video</div>
           </div>
           <div
             className="status-add__photos status-add__item"
             onClick={outsideAddPhotoOnClickHandler}
           >
-            <i
-              data-visualcompletion="css-img"
-              style={{
-                backgroundImage:
-                  "url('https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/pqfSsGC8Mfo.png')",
-                backgroundPosition: "0 -234px",
-                backgroundSize: "26px 652px",
-                width: "24px",
-                height: "24px",
-                backgroundRepeat: "no-repeat",
-                display: "inline-block",
-              }}
-            ></i>
+            <PhotoOrVideoIcon />
             <div>Photo/Video</div>
           </div>
           <div className="status-add__feeling status-add__item">
-            <i
-              data-visualcompletion="css-img"
-              style={{
-                backgroundImage:
-                  "url('https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/pqfSsGC8Mfo.png')",
-                backgroundPosition: "0 -26px",
-                backgroundSize: "26px 652px",
-                width: "24px",
-                height: "24px",
-                backgroundRepeat: "no-repeat",
-                display: "inline-block",
-              }}
-            ></i>
+            <FeelingOrActivity />
             <div>Feeling/Activity</div>
           </div>
         </div>

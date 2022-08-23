@@ -2,6 +2,8 @@ import React, { useContext, useState, useRef } from "react";
 import "./StatusList.css";
 import { StatusContext } from "../Status";
 import { v4 as uuidv4 } from "uuid";
+import icon from "../../assets/icon.png";
+import ControlIcon from "../Icon/ControlIcon";
 
 export default function StatusList() {
   const {
@@ -83,31 +85,19 @@ export default function StatusList() {
             className="status__delete"
             onClick={() => statusDeleteBtnHandler(item)}
           >
-            <i
-              style={{
-                backgroundImage:
-                  "url(https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/9hjSjlsfbAc.png)",
-                backgroundPosition: "-126px -107px",
-                backgroundSize: "auto",
-                width: "20px",
-                height: "20px",
-                backgroundRepeat: "no-repeat",
-                display: "inline-block",
-                filter: "invert(62%)",
-              }}
-            ></i>
+            <ControlIcon posX={0} posY={-132} />
           </div>
           <div className="status__informations">
             <div className="status-info__left">
               <img
                 className="status-info__image"
-                src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-1/cp0/c0.18.50.50a/p50x50/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=D9foiasEPtUAX9GaAE3&_nc_ht=scontent.fhph1-2.fna&oh=d6d82b1a006b8e76c98e848554c6645d&oe=6178BFED"
+                src={require("../../assets/avatar.jpg").default}
                 alt=""
               />
             </div>
             <div className="status-info__right">
               <a href="">
-                <div className="status-info__name">Minh Xuân Lê</div>
+                <div className="status-info__name">Minh Lê</div>
               </a>
               <a href="">
                 <div className="status-info__time">Yesterday at 10:02 AM</div>
@@ -151,9 +141,8 @@ export default function StatusList() {
                       <i
                         data-visualcompletion="css-img"
                         style={{
-                          backgroundImage:
-                            "url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/csoxz2vx1Wa.png)",
-                          backgroundPosition: "0px -218px",
+                          backgroundImage: `url(${icon})`,
+                          backgroundPosition: "0px -322px",
                           backgroundSize: "auto",
                           width: "18px",
                           height: "18px",
@@ -172,9 +161,8 @@ export default function StatusList() {
                       <i
                         data-visualcompletion="css-img"
                         style={{
-                          backgroundImage:
-                            "url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/csoxz2vx1Wa.png)",
-                          backgroundPosition: "0px -180px",
+                          backgroundImage: `url(${icon})`,
+                          backgroundPosition: "0px -284px",
                           backgroundSize: "auto",
                           width: "18px",
                           height: "18px",
@@ -184,7 +172,7 @@ export default function StatusList() {
                         }}
                       ></i>
                     </div>
-                    <div className="status-btn__text">Commment</div>
+                    <div className="status-btn__text">Comment</div>
                   </div>
                 </div>
                 <div className="status-btn__item">
@@ -193,9 +181,8 @@ export default function StatusList() {
                       <i
                         data-visualcompletion="css-img"
                         style={{
-                          backgroundImage:
-                            "url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/csoxz2vx1Wa.png)",
-                          backgroundPosition: "0px -237px",
+                          backgroundImage: `url(${icon})`,
+                          backgroundPosition: "0px -341px",
                           backgroundSize: "auto",
                           width: "18px",
                           height: "18px",
@@ -215,7 +202,7 @@ export default function StatusList() {
                 <div className="status__comment-input">
                   <img
                     className="status-comment__ava-image"
-                    src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-1/cp0/c0.18.50.50a/p50x50/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=D9foiasEPtUAX9GaAE3&_nc_ht=scontent.fhph1-2.fna&oh=d6d82b1a006b8e76c98e848554c6645d&oe=6178BFED"
+                    src={require("../../assets/avatar.jpg").default}
                     alt=""
                   />
                   <div className="status-comment__right-input">
@@ -269,7 +256,7 @@ export default function StatusList() {
                   <div className="status__comment-item ">
                     <img
                       className="status-comment__ava-image"
-                      src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.6435-1/cp0/c0.18.50.50a/p50x50/169444839_1696627483862853_6011983667638103075_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=7206a8&_nc_ohc=D9foiasEPtUAX9GaAE3&_nc_ht=scontent.fhph1-2.fna&oh=d6d82b1a006b8e76c98e848554c6645d&oe=6178BFED"
+                      src={require("../../assets/avatar.jpg").default}
                       alt=""
                     />
                     <div className="status-comment__right-side">
@@ -286,9 +273,7 @@ export default function StatusList() {
                                 : "status-comment__text-wrapper--no-text"
                             }
                           >
-                            <a className="status-comment__username">
-                              Minh Xuân Lê
-                            </a>
+                            <a className="status-comment__username">Minh Lê</a>
                             <div className="status-comment__text">
                               {comment.wordCmt}
                             </div>
@@ -304,19 +289,7 @@ export default function StatusList() {
                               key={comment.id}
                               ref={cmtDeleteBtn}
                             >
-                              <i
-                                style={{
-                                  backgroundImage:
-                                    "url(https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/9hjSjlsfbAc.png)",
-                                  backgroundPosition: "-126px -107px",
-                                  backgroundSize: "auto",
-                                  width: "20px",
-                                  height: "20px",
-                                  backgroundRepeat: "no-repeat",
-                                  display: "inline-block",
-                                  filter: "invert(62%)",
-                                }}
-                              ></i>
+                              <ControlIcon posX={0} posY={-132} />
                             </div>
                           </div>
                         </div>

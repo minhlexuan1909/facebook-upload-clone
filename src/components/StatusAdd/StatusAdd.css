@@ -12,6 +12,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .status-add__input {
   width: 100%;
@@ -44,6 +45,11 @@
 }
 .status-add__item > div {
   margin-left: 8px;
+}
+.status-add__item > div::before {
+  content: "";
+  display: block;
+  margin-top: 1px;
 }
 
 /* ____________________________________________ */
