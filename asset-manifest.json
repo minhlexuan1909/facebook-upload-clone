@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/facebook-upload-clone/static/css/main.ca31f6df.chunk.css",
-    "main.js": "/facebook-upload-clone/static/js/main.77efdbfe.chunk.js",
-    "main.js.map": "/facebook-upload-clone/static/js/main.77efdbfe.chunk.js.map",
-    "runtime-main.js": "/facebook-upload-clone/static/js/runtime-main.772868d8.js",
-    "runtime-main.js.map": "/facebook-upload-clone/static/js/runtime-main.772868d8.js.map",
-    "static/js/2.8e7dc65d.chunk.js": "/facebook-upload-clone/static/js/2.8e7dc65d.chunk.js",
-    "static/js/2.8e7dc65d.chunk.js.map": "/facebook-upload-clone/static/js/2.8e7dc65d.chunk.js.map",
-    "static/js/3.eb280007.chunk.js": "/facebook-upload-clone/static/js/3.eb280007.chunk.js",
-    "static/js/3.eb280007.chunk.js.map": "/facebook-upload-clone/static/js/3.eb280007.chunk.js.map",
+    "main.css": "/facebook-upload-clone/static/css/main.d39d5005.chunk.css",
+    "main.js": "/facebook-upload-clone/static/js/main.5365f20c.chunk.js",
+    "main.js.map": "/facebook-upload-clone/static/js/main.5365f20c.chunk.js.map",
+    "runtime-main.js": "/facebook-upload-clone/static/js/runtime-main.a1250475.js",
+    "runtime-main.js.map": "/facebook-upload-clone/static/js/runtime-main.a1250475.js.map",
+    "static/js/2.5c93c20b.chunk.js": "/facebook-upload-clone/static/js/2.5c93c20b.chunk.js",
+    "static/js/2.5c93c20b.chunk.js.map": "/facebook-upload-clone/static/js/2.5c93c20b.chunk.js.map",
+    "static/js/3.5f4c1322.chunk.js": "/facebook-upload-clone/static/js/3.5f4c1322.chunk.js",
+    "static/js/3.5f4c1322.chunk.js.map": "/facebook-upload-clone/static/js/3.5f4c1322.chunk.js.map",
     "index.html": "/facebook-upload-clone/index.html",
-    "static/css/main.ca31f6df.chunk.css.map": "/facebook-upload-clone/static/css/main.ca31f6df.chunk.css.map",
-    "static/js/2.8e7dc65d.chunk.js.LICENSE.txt": "/facebook-upload-clone/static/js/2.8e7dc65d.chunk.js.LICENSE.txt"
+    "static/css/main.d39d5005.chunk.css.map": "/facebook-upload-clone/static/css/main.d39d5005.chunk.css.map",
+    "static/js/2.5c93c20b.chunk.js.LICENSE.txt": "/facebook-upload-clone/static/js/2.5c93c20b.chunk.js.LICENSE.txt",
+    "static/media/add-to-post-icon.2c212728.png": "/facebook-upload-clone/static/media/add-to-post-icon.2c212728.png",
+    "static/media/avatar.jpg": "/facebook-upload-clone/static/media/avatar.1d04b6b2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.772868d8.js",
-    "static/js/2.8e7dc65d.chunk.js",
-    "static/css/main.ca31f6df.chunk.css",
-    "static/js/main.77efdbfe.chunk.js"
+    "static/js/runtime-main.a1250475.js",
+    "static/js/2.5c93c20b.chunk.js",
+    "static/css/main.d39d5005.chunk.css",
+    "static/js/main.5365f20c.chunk.js"
   ]
 }
